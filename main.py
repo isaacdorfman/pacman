@@ -15,6 +15,11 @@ except:
     print("Could not load board")
     exit(-1)
 
+def getPacmanIndex(board):
+    temp = np.where(board == 3)
+    return (temp[0][0],temp[1][0])
 
-
+def getGhostIndices(board):
+    temp = np.where(board == 2)
+    return zip(board[0],board[1])
 
