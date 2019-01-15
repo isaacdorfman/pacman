@@ -21,7 +21,7 @@ def getPacmanIndex(board):
 
 def getGhostIndices(board):
     temp = np.where(board == 2)
-    return zip(board[0],board[1])
+    return zip(temp[0],temp[1])
 
 boardSize = board.shape[0] * board.shape[1]
 distancesBoard = (boardSize + 1) * np.ones(board.shape,board.dtype)
