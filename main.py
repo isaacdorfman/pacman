@@ -45,5 +45,7 @@ pacmanIndex = getPacmanIndex(board)
 calculateDistances(pacmanIndex[0], pacmanIndex[1], 0)
 
 ghosts = getGhostIndices(board)
-print(ghosts)
+ghosts.sort(key=lambda x: distancesBoard[x])
+
+print [[idx, distancesBoard[idx]] for idx in ghosts]
 
